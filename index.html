@@ -32,24 +32,26 @@
 
     <section>
       <h2 class="visibility-hidden">Преимущества</h2>
-      <ul>
+      <ol>
         <li>
           <h3>Настоящий городок</h3>
           <p>— №1 —<br> Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="img/feature-picture-1.jpg" width="800" height="256"
+          <img src="img/feature-picture-1.jpg" width="800" height="256"
               alt="Фото города">
-          </li>
-        <li>
-          <h3>Жильё</h3>
-          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-        </li>
-        <li>
-          <h3>Еда</h3>
-          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-        </li>
-        <li>
-          <h3>Сувениры</h3>
-          <p>Не только китайского, но и местного производства!</p>
+          <ul>
+            <li>
+              <h3>Жильё</h3>
+              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </li>
+            <li>
+              <h3>Еда</h3>
+              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li>
+              <h3>Сувениры</h3>
+              <p>Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
         </li>
         <li>
           <img src="img/feature-picture-2.jpg" width="800" height="256"
@@ -69,11 +71,12 @@
           <h3>Мало туристов</h3>
           <p>— №5 —<br> Большинство едет в гранд каньон и толпится там</p>
         </li>
-      </ul>
+      </ol>
     </section>
 
     <section>
-      <h2>Заинтересовались?</h2>
+      <h2 class="visibility-hidden">Подобрать гостиницу в Седоне</h2>
+      <p>Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
         предложения гостиниц в седоне</p>
       <button type="button">Поиск гостиниц в Седоне</button>
@@ -81,12 +84,12 @@
         <div>
           <label for="arrival-date">Дата заезда:</label>
           <input type="text" name="arrival_date" id="arrival-date" value="24 апреля 2017">
-          <img src="img/calendar.svg" alt="Календарь">
+          <button type="button">Календарь</button>
         </div>
         <div>
           <label for="departure-date">Дата выезда:</label>
           <input type="text" name="departure_date" id="departure-date" value="24 апреля 2017">
-          <img src="img/calendar.svg" alt="Календарь">
+          <button type="button">Календарь</button>
         </div>
         <div>
           <label for="amount-adult">Взрослые:</label>
@@ -109,7 +112,7 @@
     </section>
 
     <section>
-      <!--здесь будет карта-->
+      <img src="img/map.jpg" alt="Город Седона на карте штата Аризоны" width="1200" height="593">
     </section>
   </main>
   <footer>
