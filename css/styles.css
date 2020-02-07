@@ -1,0 +1,294 @@
+/* ----- basic ----- */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  background-image: url("../img/background-main.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.inner-page {
+  background-image: url("../img/filter-background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+
+  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.button-big {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: inherit;
+
+  border: 1px solid transparent; /*Пока записала этот цвет рамки - или лучше в цвет заливки?*/
+}
+
+.button-small {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  text-transform: inherit;
+
+  border: 1px solid transparent;
+}
+.button-brown {
+  color: #ffffff;
+  background-color: #766357;
+}
+
+.button-brown:hover,
+.button-brown:focus {
+  background-color: #604e43;
+}
+
+.button-brown:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+.button-blue {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.button-blue:hover,
+.button-blue:focus {
+  background-color: #669ec0;
+}
+
+.button-blue:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+/* ----- visually-hidden ----- */
+
+/*.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}*/
+
+/* ----- header -----*/
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: inherit;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #81b3d2;
+}
+
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation-current a,
+.site-navigation-current a:hover,
+.site-navigation-current a:focus,
+.site-navigation-current a:active {
+  color: #766357;
+}
+/* ----- .main -----*/
+/* ----- intro ----- */
+
+.introduction {
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.introduction h2 {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.introduction p {
+  line-height: 26px;
+  color: #333333;
+}
+
+/* ----- .hotel-search ----- */
+.hotel-search {
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.hotel-search p:first-of-type {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.hotel-search p:last-of-type {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.search-form label,
+.search-form input[type="text"],
+.search-form input[type="number"] {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: inherit;
+
+  border-color: transparent;
+}
+
+.search-form input[type="number"] {
+  text-align: center;
+}
+
+.search-form input[type="text"]:hover,
+.search-form input[type="number"]:hover {
+  background-color: #ebebeb;
+}
+
+.search-form input[type="text"]:focus,
+.search-form input[type="number"]:focus {
+  border: solid 2px #e5e5e5;
+  background-color: #ffffff;
+  outline: transparent;
+}
+
+.calendar {
+  width: 21px;
+  height: 22px;
+  font-size: 0;
+  opacity: 0.2;
+
+  border: none;
+
+  background-image: url("../img/calendar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.calendar:hover,
+.calendar:focus {
+  opacity: 1;
+}
+
+.calendar:active {
+  background-image: url("../img/calendar-blue.svg"); /*не знаю как иначе тут решить проблему кроссбраузерности (IE11)*/
+}
+
+/* ----- .hotels-list -----*/
+.hotels-list ul {
+  list-style: none;
+
+  background-color: #e6e6e6; /*В Zeplin это не видно, но Photoshop определяет такой цвет заливки*/
+}
+
+.hotels-item {
+  background-color: #fefefe; /*В Zeplin это не видно, но Photoshop определяет такой цвет заливки*/
+}
+.hotels-item a:not([class^="button-"]) {
+  color: inherit;
+}
+
+.hotels-item a:not([class^="button-"]):hover,
+.hotels-item a:not([class^="button-"]):focus {
+  color: #81b3d2;
+}
+
+.hotels-item a:not([class^="button-"]):active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.hotels-item h3 {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hotels-item span {
+  color: #333333;
+}
+
+/* ----- footer ----- */
+.main-footer {
+  text-align: center;
+  opacity: 0.9;
+}
+
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: inherit;
+}
+
+.footer-contacts a {
+  color: inherit;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.copyright-logo {
+  position: relative;
+  display: inline-block;
+}
+
+/* IE11 fix */
+.copyright-logo::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.copyright-logo .state-hover,
+.copyright-logo .state-active,
+.copyright-logo:hover img,
+.copyright-logo:focus img,
+.copyright-logo:active img {
+  display: none;
+}
+
+.copyright-logo:hover:not(:active) .state-hover,
+.copyright-logo:focus:not(:active) .state-hover,
+.copyright-logo:active .state-active {
+  display: inline-block;
+}
