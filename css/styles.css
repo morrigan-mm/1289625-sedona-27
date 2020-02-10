@@ -10,15 +10,6 @@ body {
   text-transform: uppercase;
 
   background-color: #f2f2f2;
-  background-image: url("../img/background-main.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-}
-
-.inner-page {
-  background-image: url("../img/filter-background.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 a {
@@ -38,7 +29,7 @@ a {
   font-weight: bold;
   text-transform: inherit;
 
-  border: 1px solid transparent; /*Пока записала этот цвет рамки - или лучше в цвет заливки?*/
+  border: none;
 }
 
 .button-small {
@@ -47,7 +38,7 @@ a {
   font-weight: bold;
   text-transform: inherit;
 
-  border: 1px solid transparent;
+  border: none;
 }
 .button-brown {
   color: #ffffff;
@@ -78,9 +69,9 @@ a {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
-/* ----- visually-hidden ----- */
 
-/*.visually-hidden {
+/* ----- visually-hidden ----- */
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -89,10 +80,9 @@ a {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0)
-}*/
+}
 
 /* ----- header -----*/
-
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
@@ -125,6 +115,19 @@ a {
 }
 /* ----- .main -----*/
 /* ----- intro ----- */
+.welcome {
+  width: auto;
+  height: 510px;
+
+  background-color: #d7e8f1;
+  background-image:
+    url("../img/intro-welcome.svg"),
+    url("../img/intro-mask.svg"),
+    url("../img/background-main.jpg");
+  background-size: 459px, 100%, 100%;
+  background-position: 50% 48%, 50% 100.8%, 0% 29%;
+  background-repeat: no-repeat;
+}
 
 .introduction {
   text-align: center;
@@ -140,6 +143,33 @@ a {
 .introduction p {
   line-height: 26px;
   color: #333333;
+}
+
+/* ----- .features-list ----- */
+.features-list {
+  list-style: none;
+}
+
+.features-item {
+  text-align: center;
+}
+
+.features-item li {
+  list-style: none;
+}
+
+.features-item h3 {
+  font-size: 21px;
+}
+
+.features-item:not(~ .item-blue) p {
+  color: #333333;
+}
+
+.item-blue {
+  color: #ffffff;
+
+  background-color: #81b3d2;
 }
 
 /* ----- .hotel-search ----- */
@@ -189,37 +219,153 @@ a {
 }
 
 .calendar {
-  width: 21px;
-  height: 22px;
   font-size: 0;
-  opacity: 0.2;
 
   border: none;
 
-  background-image: url("../img/calendar.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  fill: #cacaca;
+
 }
 
 .calendar:hover,
 .calendar:focus {
-  opacity: 1;
+  fill: #000000;
 }
 
 .calendar:active {
-  background-image: url("../img/calendar-blue.svg"); /*не знаю как иначе тут решить проблему кроссбраузерности (IE11)*/
+  fill: #81b3d2;
 }
+
+.amount-button {
+  position: relative;
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  color: #cacaca;
+
+  background-color: #f2f2f2;
+}
+
+.amount-button::before,
+.amount-button::after {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: currentColor;
+}
+
+.amount-button:hover,
+.amount-button:focus {
+  color: #000000;
+}
+
+.amount-button:active {
+  color: #81b3d2;
+}
+
+.amount-decrement::before,
+.amount-increment::before {
+  content: "";
+  width: 12px;
+  height: 3px;
+}
+
+.amount-increment::before {
+  width: 11px;
+}
+
+.amount-increment::after {
+  content: "";
+  width: 3px;
+  height: 11px;
+}
+
+/* ----- .search-options----- */
+.search-options {
+  text-transform: uppercase;
+}
+
+.search-options form:first-of-type {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+  background-image: url("../img/filter-background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.search-options fieldset {
+  border: none;
+}
+
+.search-options legend {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.search-options ul {
+  list-style: none;
+}
+
+.search-options button {
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+
+  background-color: transparent;
+
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+}
+
+.search-options button:hover,
+.search-options button:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.search-sorting fieldset {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.search-sorting legend {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.sort-by label {
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-by input {
+  display: none;
+}
+
+.sort-by input:checked + label {
+  color: #81b3d2;
+  border-bottom: none;
+}
+
 
 /* ----- .hotels-list -----*/
 .hotels-list ul {
   list-style: none;
-
-  background-color: #e6e6e6; /*В Zeplin это не видно, но Photoshop определяет такой цвет заливки*/
 }
 
 .hotels-item {
-  background-color: #fefefe; /*В Zeplin это не видно, но Photoshop определяет такой цвет заливки*/
+  background-color: #fefefe; /*В Zeplin это не видно, но Photoshop определяет такой цвет*/
 }
+
+.hotels-item + .hotels-item {
+  border-top: 1px solid #e6e6e6; /*В Zeplin это не видно, но Photoshop определяет такой цвет*/
+}
+
 .hotels-item a:not([class^="button-"]) {
   color: inherit;
 }
@@ -263,32 +409,72 @@ a {
   list-style: none;
 }
 
-.copyright-logo {
-  position: relative;
-  display: inline-block;
+
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
 }
 
-/* IE11 fix */
-.copyright-logo::after {
-  content: '';
+.social-button {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+
+  font-size: 0;
+  line-height: 0;
+
+  background-color: #81b3d2;
+}
+
+.social-button-fb {
+  width: 47px;
+}
+
+.social-button::before {
+  content: "";
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.copyright-logo .state-hover,
-.copyright-logo .state-active,
-.copyright-logo:hover img,
-.copyright-logo:focus img,
-.copyright-logo:active img {
-  display: none;
+.social-button-twitter::before {
+  background-image: url("../img/social-twitter.svg");
 }
 
-.copyright-logo:hover:not(:active) .state-hover,
-.copyright-logo:focus:not(:active) .state-hover,
-.copyright-logo:active .state-active {
+.social-button-fb::before {
+  background-image: url("../img/social-fb.svg");
+}
+
+.social-button-youtube::before {
+  background-image: url("../img/social-youtube.svg");
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #669ec0;
+}
+
+.social-button:active {
+  background-color: #5496bd;
+}
+
+.social-button:active::before {
+  opacity: 0.3;
+}
+
+
+.copyright-logo {
   display: inline-block;
+  font-size: 0;
+}
+
+.copyright-logo svg:hover,
+.copyright-logo svg:focus {
+  fill: #81b3d2;
+}
+
+.copyright-logo svg:active {
+  fill: #bdbbbc;
 }
