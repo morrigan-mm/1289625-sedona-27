@@ -13,7 +13,7 @@
   <div class="wrapper">
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="#" title="Вы на этой странице">
+        <a class="main-header-logo" href="#" title="Вы на этой странице" tabindex="0">
           <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип сайта города Седоны">
         </a>
         <ul class="site-navigation">
@@ -25,22 +25,24 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main>
 
       <h1 class="visually-hidden">Седона</h1>
       <div class="welcome"></div>
       <section class="introduction">
-        <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="text-fitter">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
         <ol class="features-list">
-          <li class="features-item">
-            <div class="item-blue">
-              <h3>Настоящий городок</h3>
-              <p>— №1 —<br> Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          <li>
+            <div class="item-special">
+              <div class="list-item">
+                <h3>Настоящий городок</h3>
+                <p>— №1 —<br> Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
               <img src="img/feature-picture-1.jpg" width="800" height="256" alt="Фото города">
             </div>
             <ul class="features-sub-list">
@@ -58,20 +60,22 @@
               </li>
             </ul>
           </li>
-          <li class="features-item item-blue">
+          <li class="item-special">
             <img src="img/feature-picture-2.jpg" width="800" height="256" alt="Фото мостa">
-            <h3>Там есть Мост Дьявола</h3>
-            <p>— №2 —<br> Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <div class="list-item">
+              <h3>Там есть Мост Дьявола</h3>
+              <p>— №2 —<br> Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
           </li>
-          <li class="features-item">
+          <li class="list-item">
             <h3>Небольшая площадь</h3>
             <p>— №3 —<br> Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="features-item">
+          <li class="list-item">
             <h3>Красивая дорога</h3>
             <p>— №4 —<br> Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="features-item">
+          <li class="list-item">
             <h3>Мало туристов</h3>
             <p>— №5 —<br> Большинство едет в гранд каньон и толпится там</p>
           </li>
@@ -81,7 +85,7 @@
       <section class="hotel-search">
         <h2 class="visually-hidden">Подобрать гостиницу в Седоне</h2>
         <p>Заинтересовались?</p>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
+        <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
           предложения гостиниц в седоне</p>
         <button class="button-big button-brown" type="button">Поиск гостиницы в Седоне</button>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post" target="_blank">

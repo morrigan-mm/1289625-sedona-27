@@ -1,4 +1,12 @@
 /* ----- basic ----- */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,6 +18,8 @@ body {
   text-transform: uppercase;
 
   background-color: #f2f2f2;
+
+  word-break: break-word;
 }
 
 a {
@@ -17,10 +27,18 @@ a {
 }
 
 .wrapper {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
 
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.text-fitter {
+  width: 568px;
+  padding: 0 50px;
+  margin: 0 auto;
+  text-align: inherit;
 }
 
 .button-big {
@@ -84,14 +102,39 @@ a {
 
 /* ----- header -----*/
 .main-navigation {
+  position: relative;
+  width: 1200px;
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
   text-align: center;
 }
 
+.main-header-logo {
+  position: absolute;
+  left: calc(100%/2 - 70px);
+  display: inline-block;
+  width: 140px;
+  height: 71px;
+}
+
 .site-navigation {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
   list-style: none;
+}
+
+.site-navigation li {
+  width: 236px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.site-navigation li:nth-child(2) {
+  margin-right: 244px;
 }
 
 .site-navigation a {
@@ -130,6 +173,8 @@ a {
 }
 
 .introduction {
+  margin-top: 60px;
+  margin-bottom: 55px;
   text-align: center;
 
   background-color: #ffffff;
@@ -146,37 +191,46 @@ a {
 }
 
 /* ----- .features-list ----- */
-.features-list {
+.features-list, .features-sub-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
   list-style: none;
-}
-
-.features-item {
   text-align: center;
 }
 
-.features-item li {
-  list-style: none;
-}
-
-.features-item h3 {
+.features-list h3 {
   font-size: 21px;
 }
 
-.features-item:not(~ .item-blue) p {
-  color: #333333;
-}
+.features-list .item-special {
+  display: flex;
 
-.item-blue {
   color: #ffffff;
 
   background-color: #81b3d2;
 }
 
+.list-item, .features-sub-list li {
+  width: 400px;
+  padding: 50px; /*примерное временное значение*/
+}
+
+.item-special img {
+  width: 800px;
+  height: 256px;
+}
 /* ----- .hotel-search ----- */
+
 .hotel-search {
   text-align: center;
 
   background-color: #ffffff;
+}
+
+.hotel-search .text-positioner {
+  padding: 0 67px;
 }
 
 .hotel-search p:first-of-type {
@@ -191,11 +245,25 @@ a {
   color: #333333;
 }
 
+.hotel-search button[class*="-brown"] {
+  position: relative;
+  width: 568px;
+}
+
+.search-form {
+  position: absolute;
+  width: 568px;
+  padding: 55px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
 .search-form label,
 .search-form input[type="text"],
 .search-form input[type="number"] {
   font-size: 14px;
-  line-height: 26px;
+  line-height: 38px;
   font-weight: bold;
   text-transform: inherit;
 
@@ -219,6 +287,7 @@ a {
 }
 
 .calendar {
+  vertical-align: middle;
   font-size: 0;
 
   border: none;
@@ -240,6 +309,7 @@ a {
   position: relative;
   width: 38px;
   height: 38px;
+  vertical-align: middle;
 
   border: none;
   color: #cacaca;
@@ -293,7 +363,7 @@ a {
 
   background-color: #81b3d2;
   background-image: url("../img/filter-background.jpg");
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -328,6 +398,34 @@ a {
   background-color: #ffffff;
 }
 
+.search-filters {
+  display: flex;
+  padding: 20px 72px; /*временные значения*/
+}
+
+.filters-column ul {
+  padding: 0;
+  margin: 0;
+}
+
+.filters-column-aside {
+  margin-left: auto;
+}
+
+.search-sorting {
+  display: flex;
+  padding: 30px 72px;
+}
+
+.search-sorting h3 {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.search-sorting .sort-dir {
+  margin-left: auto;
+}
+
 .search-sorting fieldset {
   font-size: 12px;
   line-height: 18px;
@@ -354,11 +452,22 @@ a {
 
 
 /* ----- .hotels-list -----*/
+.hotels-list {
+  padding: 0 71px;
+}
+
 .hotels-list ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 .hotels-item {
+  display: flex;
+  padding: 30px 0;
+
   background-color: #fefefe; /*В Zeplin это не видно, но Photoshop определяет такой цвет*/
 }
 
@@ -378,10 +487,19 @@ a {
 .hotels-item a:not([class^="button-"]):active {
   color: rgba(0, 0, 0, 0.3);
 }
+.hotels-item img {
+  width: 135px;
+  height: 90px;
+}
 
 .hotels-item h3 {
   font-size: 21px;
   line-height: 26px;
+}
+
+.hotels-item p {
+  margin: 0;
+  margin-left: auto;
 }
 
 .hotels-item span {
@@ -390,14 +508,26 @@ a {
 
 /* ----- footer ----- */
 .main-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   text-align: center;
-  opacity: 0.9;
+  background-color: rgba(254, 254, 254, 0.9);
+}
+
+.inner-page .main-footer {
+  position: static;
 }
 
 .footer-contacts {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  text-align: left;
   color: inherit;
 }
 
@@ -406,13 +536,10 @@ a {
 }
 
 .footer-social ul {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
-}
-
-
-.footer-copyright {
-  font-size: 14px;
-  line-height: 26px;
 }
 
 .social-button {
@@ -424,10 +551,6 @@ a {
   line-height: 0;
 
   background-color: #81b3d2;
-}
-
-.social-button-fb {
-  width: 47px;
 }
 
 .social-button::before {
@@ -464,10 +587,16 @@ a {
   opacity: 0.3;
 }
 
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+}
 
 .copyright-logo {
   display: inline-block;
+  vertical-align: middle;
   font-size: 0;
+  line-height: 0;
 }
 
 .copyright-logo svg:hover,
