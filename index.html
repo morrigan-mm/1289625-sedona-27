@@ -41,7 +41,8 @@
             <div class="item-special">
               <div class="list-item">
                 <h3>Настоящий городок</h3>
-                <p>— №1 —<br> Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                <p>— №1 —</p>
+                <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img src="img/feature-picture-1.jpg" width="800" height="256" alt="Фото города">
             </div>
@@ -61,23 +62,27 @@
             </ul>
           </li>
           <li class="item-special">
-            <img src="img/feature-picture-2.jpg" width="800" height="256" alt="Фото мостa">
             <div class="list-item">
-              <h3>Там есть Мост Дьявола</h3>
-              <p>— №2 —<br> Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <h3>Там есть<br>Мост Дьявола</h3>
+              <p>— №2 —</p>
+              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
+            <img src="img/feature-picture-2.jpg" width="800" height="256" alt="Фото мостa">
           </li>
           <li class="list-item">
             <h3>Небольшая площадь</h3>
-            <p>— №3 —<br> Все достопримечательности находятся очень близко</p>
+            <p>— №3 —</p>
+            <p>Все достопримечательности находятся очень близко</p>
           </li>
           <li class="list-item">
             <h3>Красивая дорога</h3>
-            <p>— №4 —<br> Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p>— №4 —</p>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="list-item">
             <h3>Мало туристов</h3>
-            <p>— №5 —<br> Большинство едет в гранд каньон и толпится там</p>
+            <p>— №5 —</p>
+            <p>Большинство едет в гранд каньон и толпится там</p>
           </li>
         </ol>
       </section>
@@ -87,8 +92,9 @@
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
           предложения гостиниц в седоне</p>
-        <button class="button-big button-brown" type="button">Поиск гостиницы в Седоне</button>
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+        <div>
+          <button class="button-big button-brown" type="button">Поиск гостиницы в Седоне</button>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
           <div>
             <label for="arrival-date">Дата заезда:</label>
             <input type="text" name="arrival_date" id="arrival-date" value="24 апреля 2017">
@@ -109,14 +115,15 @@
           </button>
           </div>
           <div>
-            <label for="amount-adult">Взрослые:</label>
-            <div>
-              <button class="amount-button amount-decrement" type="button" aria-label="Убавить колличество"></button>
-              <input type="number" name="amount_adult" id="amount-adult" min="0" max="100" step="1" value="2">
-              <button class="amount-button amount-increment" type="button" aria-label="Добавить колличество"></button>
+            <div class="amount-guests">
+              <label for="amount-adult">Взрослые:</label>
+              <div>
+                <button class="amount-button amount-decrement" type="button" aria-label="Убавить колличество"></button>
+                <input type="number" name="amount_adult" id="amount-adult" min="0" max="100" step="1" value="2">
+                <button class="amount-button amount-increment" type="button" aria-label="Добавить колличество"></button>
+              </div>
             </div>
-          </div>
-          <div>
+            <div class="amount-guests">
             <label for="amount-children">Дети:</label>
             <div>
               <button class="amount-button amount-decrement" type="button" aria-label="Убавить колличество"></button>
@@ -124,11 +131,14 @@
               <button class="amount-button amount-increment" type="button" aria-label="Добавить колличество"></button>
             </div>
           </div>
+          </div>
           <button class="button-big button-blue" type="submit">Найти</button>
         </form>
+        </div>
       </section>
 
       <section class="map">
+        <h2 class="visually-hidden">Интерактивная карта</h2>
         <img src="img/map.jpg" width="1200" height="593" alt="Город Седона на карте штата Аризоны">
       </section>
     </main>
