@@ -209,7 +209,7 @@ input[type="radio"].visually-hidden {
     url("../img/intro-mask.svg"),
     url("../img/background-main.jpg");
   background-size: 38% 100%, 100%, 100%;
-  background-position: 49.9% 49.25%, 50% 100.5%, 0% 28.5%;
+  background-position: 49.9% 49.25%, 50% 100.57%, 0% 28.5%;
   background-repeat: no-repeat;
 }
 
@@ -498,6 +498,10 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
 }
 
+.calendar svg {
+  overflow: visible;
+}
+
 .calendar:hover,
 .calendar:focus {
   color: #000000;
@@ -683,7 +687,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .filters-column input[type="checkbox"]:focus + label::before {
-  outline: 5px auto Highlight;
+  outline: 1px dotted;
+  outline: 2px auto Highlight;
+}
+
+.filters-column input[type="checkbox"]:-moz-focusring + label::before {
+  outline: 1px dotted;
 }
 
 .filters-column input[type="checkbox"]:checked + label::before {
@@ -804,7 +813,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sort-by input:focus + label {
-  outline: 5px auto Highlight;
+  outline: 1px dotted;
+  outline: 2px auto Highlight;
+}
+
+.sort-by input:-moz-focusring + label {
+  outline: 1px dotted;
 }
 
 .sort-dir label {
@@ -861,7 +875,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sort-dir input:focus + label {
-  outline: 5px auto Highlight;
+  outline: 1px dotted;
+  outline: 2px auto Highlight;
+}
+
+.sort-dir input:-moz-focusring + label {
+  outline: 1px dotted;
 }
 
 .range-slider {
@@ -1075,15 +1094,15 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
 }
 
 .rating-item.four-stars {
-  width: 79%;
+  width: 73%;
 }
 
  .rating-item.three-stars {
-  width: 59%;
+  width: 53%;
 }
 
 .rating-item.two-stars {
-  width: 39%;
+  width: 35%;
 }
 
 /* ----- footer ----- */
@@ -1203,6 +1222,7 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
 }
 
 .copyright-logo {
+  position: relative;
   display: inline-block;
   margin-left: 5px;
 
@@ -1212,11 +1232,11 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
   color: #231f20;
 }
 
-.copyright-logo:hover,
-.copyright-logo:focus {
+.copyright-logo svg:hover,
+.copyright-logo svg:focus {
   color: #81b3d2;
 }
 
-.copyright-logo:active {
+.copyright-logo svg:active {
   color: #bdbbbc;
 }
