@@ -34,6 +34,18 @@ input[type=text]::-ms-clear {
   display: none;
 }
 
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input:focus::-ms-input-placeholder {
+    color: transparent;
+}
+
 .wrapper {
   position: relative;
   width: 1200px;
