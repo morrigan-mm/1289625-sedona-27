@@ -24,7 +24,6 @@ try {
   isStorageSupport = false;
 }
 
-
 button.addEventListener("click", function(evt) {
   evt.preventDefault();
 
