@@ -7,11 +7,6 @@ html {
   box-sizing: inherit;
 }
 
-a, button, label, input, svg {
-  transition: color 0.3s, background 0.3s;
-  transition-timing-function: ease-in-out;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -91,6 +86,7 @@ input:focus::-ms-input-placeholder {
 }
 .button-brown {
   color: #ffffff;
+
   background-color: #766357;
 }
 
@@ -101,11 +97,13 @@ input:focus::-ms-input-placeholder {
 
 .button-brown:active {
   color: rgba(255, 255, 255, 0.3);
+
   background-color: #503e33;
 }
 
 .button-blue {
   color: #ffffff;
+
   background-color: #81b3d2;
 }
 
@@ -116,6 +114,7 @@ input:focus::-ms-input-placeholder {
 
 .button-blue:active {
   color: rgba(255, 255, 255, 0.3);
+
   background-color: #5496bd;
 }
 
@@ -124,11 +123,11 @@ input:focus::-ms-input-placeholder {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
+
   border: 0;
 
   white-space: nowrap;
@@ -218,6 +217,7 @@ input[type="radio"].visually-hidden {
 .site-navigation-current a:active {
   color: #766357;
 }
+
 /* ----- .main -----*/
 /* ----- intro ----- */
 .welcome {
@@ -290,11 +290,11 @@ input[type="radio"].visually-hidden {
   padding-left: 24px;
 }
 
-
 .features-list .item-special {
   display: flex;
 
   color: #ffffff;
+
   background-color: #81b3d2;
 }
 
@@ -505,12 +505,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .calendar {
   position: absolute;
-  right: 2px;
   top: calc(50% - 11px);
+  right: 2px;
+
   vertical-align: middle;
   font-size: 0;
-
   color: #cacaca;
+
   background-color: transparent;
   border: none;
 }
@@ -534,8 +535,8 @@ input[type=number]::-webkit-outer-spin-button {
   width: 38px;
   min-height: 38px;
   vertical-align: middle;
-
   color: #cacaca;
+
   background-color: #f2f2f2;
   border: none;
 }
@@ -639,7 +640,6 @@ input[type=number]::-webkit-outer-spin-button {
   text-transform: inherit;
 
   background-color: transparent;
-
   border: 2px solid #ffffff;
   border-radius: 3px;
 }
@@ -871,7 +871,6 @@ input[type=number]::-webkit-outer-spin-button {
   height: 0;
 
   border: 6px solid transparent;
-  transition: border 0.3s;
 }
 
 .sort-dir .dir-up::before {
@@ -940,7 +939,6 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 50%;
   box-shadow: 0 2px 0 0 rgba(177, 177, 177, 0.5);
 
-  transition: 0.3s transform ease-out;
   cursor: pointer;
 }
 
@@ -954,13 +952,12 @@ input[type=number]::-webkit-outer-spin-button {
   height: 20px;
 
   background-color: #b1b1b1;
-
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 0 0 rgba(177, 177, 177, 0.5);
 
   box-sizing: border-box;
-  transition: 0.3s transform ease-out;
+
   cursor: pointer;
 }
 
@@ -971,20 +968,20 @@ input[type=number]::-webkit-outer-spin-button {
 /* IE only */
 _:-ms-fullscreen, :root .range-slider {
   height: 24px;
-  background: transparent;
+  background-color: transparent;
 }
 
 /* Edge only */
 _:-ms-lang(x), _:-webkit-full-screen, .range-slider,
 _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
   height: 20px;
-  background: transparent;
+  background-color: transparent;
 }
 
 /* IE + Edge */
 .range-slider::-ms-fill-lower,
 .range-slider::-ms-fill-upper {
-  background: transparent;
+  background-color: transparent;
 }
 
 .range-slider::-ms-thumb {
@@ -993,13 +990,12 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
   margin: 0 1px;
 
   background-color: #b1b1b1;
-
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 0 0 rgba(177, 177, 177, 0.5);
 
   box-sizing: inherit;
-  transition: 0.3s transform ease-out;
+
   cursor: pointer;
 }
 
@@ -1012,13 +1008,12 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
   margin: 0 1px;
 
   color: transparent;
-  background: #ffffff;
-
+  background-color: #ffffff;
   border: none;
 }
 
 .range-slider[name="cost_to"]::-ms-track {
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* ----- .hotels-list -----*/
@@ -1145,12 +1140,12 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
 /* ----- footer ----- */
 .main-footer {
   position: absolute;
-  width: 100%;
-  min-height: 120px;
   bottom: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  width: 100%;
+  min-height: 120px;
 
   background-color: rgba(254, 254, 254, 0.9);
   z-index: 100;
@@ -1158,8 +1153,9 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
 
 /* IE11 fix */
 .main-footer::after {
-  content: '';
+  content: "";
   min-height: inherit;
+
   font-size: 0;
 }
 
