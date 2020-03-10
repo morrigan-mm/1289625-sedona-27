@@ -24,6 +24,7 @@ try {
   isStorageSupport = false;
 }
 
+
 button.addEventListener("click", function(evt) {
   evt.preventDefault();
 
@@ -36,6 +37,7 @@ button.addEventListener("click", function(evt) {
 
   formWrapper.classList.toggle("search-form-hide");
 });
+
 
 form.addEventListener("submit", function(evt) {
   if (isStorageSupport) {

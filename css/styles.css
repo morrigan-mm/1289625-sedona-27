@@ -696,6 +696,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .filters-column input[type="checkbox"] + label::before {
   position: absolute;
+  /* top: calc(50% - 23px / 2); */
+  top: -2px;
   left: 0;
   content: "";
   width: 27px;
@@ -968,13 +970,17 @@ input[type=number]::-webkit-outer-spin-button {
 /* IE only */
 _:-ms-fullscreen, :root .range-slider {
   height: 24px;
+  margin: -10px 0;
+
   background-color: transparent;
 }
 
 /* Edge only */
 _:-ms-lang(x), _:-webkit-full-screen, .range-slider,
 _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
-  height: 20px;
+  height: 28px;
+  margin: -10px 0;
+
   background-color: transparent;
 }
 
