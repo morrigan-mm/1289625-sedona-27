@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /* ----- basic ----- */
 html {
   box-sizing: border-box;
@@ -8,15 +10,15 @@ html {
 }
 
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   color: #000000;
   text-transform: uppercase;
-  word-break: break-word;
+  overflow-wrap: break-word;
 
   background-color: #f2f2f2;
 }
@@ -32,22 +34,6 @@ button {
 img {
   max-width: 100%;
   height: auto;
-}
-
-input[type=text]::-ms-clear {
-  display: none;
-}
-
-input:focus::-webkit-input-placeholder {
-    color: transparent;
-}
-
-input:focus::-moz-placeholder {
-    color: transparent;
-}
-
-input:focus::-ms-input-placeholder {
-    color: transparent;
 }
 
 .wrapper {
@@ -132,8 +118,10 @@ input[type="radio"].visually-hidden {
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
@@ -153,7 +141,6 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 0;
   left: calc(50% - 70px);
-  display: inline-block;
   width: 140px;
   height: 71px;
 }
@@ -418,12 +405,27 @@ input[type="radio"].visually-hidden {
 
 .search-form-hide .search-form {
   transform: translateY(-100%);
-  transition: none;
 }
 
 .input-with-icon {
   position: relative;
   width: 100%;
+}
+
+.search-form input[type=text]::-ms-clear {
+  display: none;
+}
+
+.search-form input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.search-form input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.search-form input:focus::placeholder {
+  color: transparent;
 }
 
 .search-form div {
@@ -452,7 +454,8 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form label {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   flex-shrink: 0;
   width: 109px;
   margin-right: 4px;
@@ -708,7 +711,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .filters-column input[type="checkbox"]:focus + label::before {
   outline: 1px dotted;
-  outline: 2px auto Highlight;
+  outline: 2px auto #4d90fe;
 }
 
 .filters-column input[type="checkbox"]:-moz-focusring + label::before {
@@ -776,7 +779,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .filters-column-aside button {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   min-width: 133px;
   padding: 8px;
   margin-top: 11px;
@@ -845,7 +849,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .sort-by input:focus + label {
   outline: 1px dotted;
-  outline: 2px auto Highlight;
+  outline: 2px auto #4d90fe;
 }
 
 .sort-by input:-moz-focusring + label {
@@ -907,7 +911,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .sort-dir input:focus + label {
   outline: 1px dotted;
-  outline: 2px auto Highlight;
+  outline: 2px auto #4d90fe;
 }
 
 .sort-dir input:-moz-focusring + label {
@@ -1129,6 +1133,7 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
   margin-bottom: auto;
 
   background: url("../img/star.svg") space;
+  vertical-align: top;
 }
 
 .rating-item.four-stars {
@@ -1215,6 +1220,7 @@ _:-ms-lang(x), _:-webkit-full-screen, .range-slider[name="cost_to"] {
   line-height: 0;
 
   background-color: #81b3d2;
+  vertical-align: top;
 }
 
 .social-button::before {
