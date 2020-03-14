@@ -69,8 +69,8 @@
             <fieldset>
               <legend>Стоимость в сутки (Р):</legend>
               <div class="price-controls">
-                <label>От <input type="number" min="0" max="2999" value="0"></label>
-                <label>До <input type="number" min="1" max="3500" value="3000"></label>
+                <label>От <input type="number" name="price_min" min="0" max="2999" step="1" value="0"></label>
+                <label>До <input type="number" name="price_max" min="1" max="3500" step="1" value="3000"></label>
               </div>
               <div class="slider">
                 <div class="slider-track">
@@ -78,8 +78,6 @@
                 </div>
                 <div class="slider-thumb slider-thumb-from"></div>
                 <div class="slider-thumb slider-thumb-to"></div>
-                <!-- <input class="range-slider" type="range" name="cost_from" id="cost-from" min="0" max="2990" step="10" value="0">
-                <input class="range-slider" type="range" name="cost_to" id="cost-to" min="2990" max="3500" step="10" value="3000"> -->
               </div>
             </fieldset>
             <button type="submit">Показать</button>

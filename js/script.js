@@ -9,7 +9,7 @@ var isStorageSupport = true;
 var storageAdult = "";
 var storageChildren = "";
 
-
+form.noValidate = true;
 formWrapper.classList.add("search-form-hide");
 
 try {
@@ -40,6 +40,12 @@ button.addEventListener("click", function(evt) {
 
 
 form.addEventListener("submit", function(evt) {
+  if (!adultAmount.validity.valid) {
+    evt.preventDefault();
+    formWrapper.classList.remove("input-error");
+    formWrapper.offsetWidth = formWrapper.offsetWidth;
+    formWrapper.classList.add("input-error");
+  } else
   if (isStorageSupport) {
     localStorage.setItem("adultAmount", adultAmount.value);
     localStorage.setItem("childrenAmount", childrenAmount.value);

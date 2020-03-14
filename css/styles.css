@@ -407,6 +407,32 @@ input[type="radio"].visually-hidden {
   transform: translateY(-100%);
 }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.search-form-wrapper.input-error {
+  animation: shake 0.6s;
+}
+
 .input-with-icon {
   position: relative;
   width: 100%;
@@ -414,6 +440,10 @@ input[type="radio"].visually-hidden {
 
 .search-form input[type=text]::-ms-clear {
   display: none;
+}
+
+.search-form input:focus::-moz-input-placeholder {
+  color: transparent;
 }
 
 .search-form input:focus::-ms-input-placeholder {
@@ -486,8 +516,8 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+.search-form input[type=number]::-webkit-inner-spin-button,
+.search-form input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
@@ -699,8 +729,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .filters-column input[type="checkbox"] + label::before {
   position: absolute;
-  /* top: calc(50% - 23px / 2); */
-  top: -2px;
+  top: calc(50% - 23px / 2);
   left: 0;
   content: "";
   width: 27px;
@@ -904,10 +933,6 @@ input[type=number]::-webkit-outer-spin-button {
   outline: 2px auto #4d90fe;
 }
 
-.sort-by a:-moz-focusring {
-  outline: 1px dotted;
-}
-
 .sort-by .active {
   color: #81b3d2;
 
@@ -930,10 +955,6 @@ input[type=number]::-webkit-outer-spin-button {
   outline: 2px auto #4d90fe;
 }
 
-.sort-dir a:-moz-focusring {
-  outline: 1px dotted;
-}
-
 .sort-dir a::before {
   position: absolute;
   top: 3px;
@@ -952,12 +973,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sort-dir .dir-up:hover::before,
-.sort-dir .dir-up:focus::before {
+.sort-dir .dir-up:focus::before,
+.sort-dir .dir-up.active:hover::before,
+.sort-dir .dir-up.active:focus::before
+ {
   border-bottom-color: #000000;
 }
 
 .sort-dir .dir-up:active::before,
-.sort-dir .dir-up.active::before {
+.sort-dir .dir-up.active::before
+ {
   border-bottom-color: #81b3d2;
 }
 
@@ -967,7 +992,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sort-dir .dir-down:hover::before,
-.sort-dir .dir-down:focus::before {
+.sort-dir .dir-down:focus::before,
+.sort-dir .dir-down.active:hover::before,
+.sort-dir .dir-down.active:focus::before {
   border-top-color: #000000;
 }
 
