@@ -800,11 +800,21 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 26px;
 }
 
+.search-sorting h4 {
+  display: inline-block;
+  margin: 0 38px 0 0;
+
+  font-size: inherit;
+  font-weight: normal;
+  vertical-align: top;
+}
+
 .search-sorting .sort-dir {
   margin-left: auto;
 }
 
-.search-sorting fieldset {
+.sort-by,
+.sort-dir {
   padding-top: 5px;
   margin-left: 30px;
 
@@ -812,51 +822,43 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 18px;
 }
 
-.search-sorting legend {
-  float: left;
-  margin-right: 6px;
-
-  font-size: inherit;
-  font-weight: normal;
-}
-
-.sort-by label {
-  margin-left: 32px;
-
+.sort-by a {
   color: rgba(0, 0, 0, 0.3);
 
   border-bottom: 1px dotted #81b3d2;
-
-  cursor: pointer;
 }
 
-.sort-by label:hover,
-.sort-by label:focus {
+.sort-by a + a {
+  margin-left: 28px;
+}
+
+.sort-by a:hover,
+.sort-by a:focus {
   color: #81b3d2;
 }
 
-.sort-by label:active {
+.sort-by a:active {
   color: #000000;
 
   border-bottom: none;
 }
 
-.sort-by input:checked + label {
+.sort-by a:focus {
+  outline: 1px dotted;
+  outline: 2px auto #4d90fe;
+}
+
+.sort-by a:-moz-focusring {
+  outline: 1px dotted;
+}
+
+.sort-by .active {
   color: #81b3d2;
 
   border-bottom: none;
 }
 
-.sort-by input:focus + label {
-  outline: 1px dotted;
-  outline: 2px auto #4d90fe;
-}
-
-.sort-by input:-moz-focusring + label {
-  outline: 1px dotted;
-}
-
-.sort-dir label {
+.sort-dir a {
   position: relative;
   display: inline-block;
   height: 20px;
@@ -867,7 +869,16 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-.sort-dir label::before {
+.sort-dir a:focus {
+  outline: 1px dotted;
+  outline: 2px auto #4d90fe;
+}
+
+.sort-dir a:-moz-focusring {
+  outline: 1px dotted;
+}
+
+.sort-dir a::before {
   position: absolute;
   top: 3px;
   right: 0;
@@ -890,7 +901,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sort-dir .dir-up:active::before,
-.sort-dir input:checked + .dir-up::before {
+.sort-dir .dir-up.active::before {
   border-bottom-color: #81b3d2;
 }
 
@@ -905,17 +916,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sort-dir .dir-down:active::before,
-.sort-dir input:checked + .dir-down::before {
+.sort-dir .dir-down.active::before {
   border-top-color: #81b3d2;
-}
-
-.sort-dir input:focus + label {
-  outline: 1px dotted;
-  outline: 2px auto #4d90fe;
-}
-
-.sort-dir input:-moz-focusring + label {
-  outline: 1px dotted;
 }
 
 .range-slider {

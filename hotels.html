@@ -80,24 +80,19 @@
             <button type="submit">Показать</button>
           </div>
         </form>
-        <form class="search-sorting" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+        <div class="search-sorting">
           <h3>Найдено: 3</h3>
-          <fieldset class="sort-by">
-            <legend>Сортировка:</legend>
-            <input class="visually-hidden" type="radio" name="sort_by" id="sort-by-price" value="price" checked>
-            <label for="sort-by-price">По цене</label>
-            <input class="visually-hidden" type="radio" name="sort_by" id="sort-by-type" value="type">
-            <label for="sort-by-type">По типу</label>
-            <input class="visually-hidden" type="radio" name="sort_by" id="sort-by-rating" value="rating">
-            <label for="sort-by-rating">По рейтингу</label>
-          </fieldset>
-          <fieldset class="sort-dir">
-            <input class="visually-hidden" type="radio" name="sort_dir" id="sort-dir-up" value="up">
-            <label class="dir-up" for="sort-dir-up">По возрастанию</label>
-            <input class="visually-hidden" type="radio" name="sort_dir" id="sort-dir-down" value="down" checked>
-            <label class="dir-down" for="sort-dir-down">По убыванию</label>
-          </fieldset>
-        </form>
+          <div class="sort-by">
+            <h4>Сортировка:</h4>
+            <a class="active" href="#">По цене</a>
+            <a href="#">По типу</a>
+            <a href="#">По рейтингу</a>
+          </div>
+          <div class="sort-dir">
+            <a class="dir-up" href="#">По возрастанию</a>
+            <a class="dir-down active" href="#">По убыванию</a>
+          </div>
+        </div>
       </section>
 
       <section class="hotels-list">
